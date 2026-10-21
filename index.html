@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VisiteGo – خدمة الفحص الفني حتى لباب دارك</title>
+<meta name="description" content="نستلمو كرهبتك، نعدّيو الفحص الفني بمركز السيجومي، ونرجعوها لك. تونس العاصمة.">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fb;--bg2:#eaf1fb;--card:#fff;--text:#0f1b2d;--muted:#5a6a80;--brand:#0a5fc4;--brand2:#0b3d82;--on:#fff;--acc:#f59e0b;--line:#dfe6f0;--wa:#1fa855;--hdr:rgba(255,255,255,.9);--sh:0 8px 24px rgba(15,40,80,.08);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b121c;--bg2:#101b2b;--card:#142033;--text:#eaf0f8;--muted:#9fb0c6;--brand:#4da3ff;--brand2:#2a6fc0;--on:#04162b;--acc:#fbbf24;--line:#233349;--hdr:rgba(11,18,28,.9);--sh:0 8px 24px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b121c;--bg2:#101b2b;--card:#142033;--text:#eaf0f8;--muted:#9fb0c6;--brand:#4da3ff;--brand2:#2a6fc0;--on:#04162b;--acc:#fbbf24;--line:#233349;--hdr:rgba(11,18,28,.9);--sh:0 8px 24px rgba(0,0,0,.35);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.75}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);backdrop-filter:blur(10px);z-index:60}
+a{color:inherit;text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.25rem}
+.logo i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:var(--on);font-style:normal;font-size:1.1rem}
+.links{display:none;gap:22px;font-weight:600;color:var(--muted)}
+.links a:hover{color:var(--brand)}
+@media(min-width:760px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:var(--on);border:0;border-radius:12px;padding:11px 22px;font:700 .98rem 'Cairo',Tahoma,sans-serif;cursor:pointer;box-shadow:var(--sh)}
+.btn.ghost{background:transparent;color:var(--text);border:1.5px solid var(--line);box-shadow:none}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.lg{padding:14px 28px;font-size:1.05rem}
+.hero{background:radial-gradient(1000px 400px at 80% -10%,var(--bg2),transparent),var(--bg);padding:44px 0 30px}
+.hg{display:grid;gap:28px;align-items:center}
+@media(min-width:800px){.hg{grid-template-columns:1.15fr 1fr}}
+.pill{display:inline-block;background:var(--bg2);color:var(--brand);border:1px solid var(--line);border-radius:99px;padding:3px 14px;font-weight:700;font-size:.85rem}
+h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.3;margin:12px 0;font-weight:800}
+h1 b{color:var(--brand)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.art{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--sh)}
+.art svg{width:100%;height:auto;display:block}
+.trust{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+@media(min-width:700px){.trust{grid-template-columns:repeat(4,1fr)}}
+.t{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:700;font-size:.92rem;display:flex;gap:8px;align-items:center}
+.t span{font-size:1.2rem}
+section{padding:54px 0}
+.alt{background:var(--bg2)}
+.eyebrow{color:var(--brand);font-weight:800;font-size:.85rem;letter-spacing:.5px}
+h2{font-size:1.7rem;margin:4px 0 8px;font-weight:800}
+.sub{color:var(--muted);max-width:560px;margin:0 0 26px}
+.grid{display:grid;gap:14px}
+@media(min-width:700px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:8px 0 4px;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.ic{width:46px;height:46px;border-radius:13px;background:var(--bg2);display:grid;place-items:center;font-size:1.4rem}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--on);display:grid;place-items:center;font-weight:800}
+.pkg{position:relative}
+.pkg.hot{border:2px solid var(--brand)}
+.badge{position:absolute;top:-12px;right:18px;background:var(--acc);color:#1a1200;font-weight:800;font-size:.78rem;border-radius:99px;padding:2px 12px}
+.price{font-size:2.3rem;font-weight:800;color:var(--brand);line-height:1.1;margin:6px 0}
+.price small{font-size:1rem;color:var(--muted);font-weight:600}
+.pkg ul{list-style:none;padding:0;margin:12px 0 16px}
+.pkg li{padding:5px 0;color:var(--muted);font-size:.95rem}
+.pkg li::before{content:"✓";color:var(--brand);font-weight:800;margin-inline-end:8px}
+.pkg .btn{width:100%}
+.note{color:var(--muted);font-size:.86rem;margin-top:14px}
+.bgrid{display:grid;gap:24px}
+@media(min-width:800px){.bgrid{grid-template-columns:1fr 1.1fr}}
+label{display:block;font-weight:700;margin:12px 0 4px;font-size:.93rem}
+input,select{width:100%;padding:12px 13px;border-radius:11px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font:1rem 'Cairo',Tahoma,sans-serif}
+input:focus,select:focus{outline:2px solid var(--brand);border-color:transparent}
+.two{display:grid;gap:10px}
+@media(min-width:520px){.two{grid-template-columns:1fr 1fr}}
+.chk{display:flex;gap:9px;align-items:center;font-weight:500;margin:8px 0}
+.chk input{width:auto}
+.total{display:flex;justify-content:space-between;align-items:center;margin:16px 0;padding:14px 16px;border-radius:14px;background:var(--bg2);border:1px dashed var(--brand);font-weight:700}
+.total b{font-size:1.5rem;color:var(--brand)}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 0;color:var(--muted)}
+.ct{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+footer{background:var(--brand2);color:#fff;padding:30px 0 90px;font-size:.92rem}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+.fab{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;font-size:1.6rem;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<a href="#top" class="logo"><i>✓</i>VisiteGo</a>
+<nav class="links"><a href="#how">كيفاش تخدم</a><a href="#prices">الأسعار</a><a href="#faq">أسئلة</a><a href="#book">الحجز</a></nav>
+<a class="btn" href="#book">احجز الآن</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="w">
+<div class="hg">
+<div>
+<span class="pill">تونس العاصمة · مركز الفحص بالسيجومي</span>
+<h1>الفحص الفني لكرهبتك، <b>بلا طابور وبلا تعب</b></h1>
+<p class="lead">سائق محترف ياخذ كرهبتك من عندك، يعدّي بيها الـvisite technique ويرجعها لك مع الورقة. انت كمّل نهارك عادي.</p>
+<div class="cta">
+<a class="btn wa lg" href="https://wa.me/21623099462" target="_blank" rel="noopener">احجز بالواتساب</a>
+<a class="btn ghost lg" href="tel:+21623099462">☎ 23 099 462</a>
+</div>
+</div>
+<div class="art">
+<svg viewBox="0 0 400 240" role="img" aria-label="سيارة تعدّت الفحص">
+<rect x="0" y="170" width="400" height="6" rx="3" fill="var(--line)"/>
+<path d="M50 150 L80 105 Q88 92 105 92 H245 Q262 92 272 104 L312 128 Q338 132 348 150 V166 H50 Z" fill="var(--brand)"/>
+<path d="M98 104 H170 V128 H82 Z M182 104 H244 L272 128 H182 Z" fill="var(--bg2)"/>
+<circle cx="115" cy="168" r="23" fill="var(--text)"/><circle cx="115" cy="168" r="10" fill="var(--bg2)"/>
+<circle cx="290" cy="168" r="23" fill="var(--text)"/><circle cx="290" cy="168" r="10" fill="var(--bg2)"/>
+<circle cx="335" cy="48" r="34" fill="var(--wa)"/>
+<path d="M319 49 L331 61 L353 36" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="200" y="215" text-anchor="middle" font-family="Cairo,Tahoma,sans-serif" font-weight="800" font-size="20" fill="var(--text)">Visite technique ✓</text>
+</svg>
+</div>
+</div>
+<div class="trust">
+<div class="t"><span>🛡️</span>تأمين مهني للسائق</div>
+<div class="t"><span>📄</span>تفويض كتابي رسمي</div>
+<div class="t"><span>🔧</span>إصلاح وcontre-visite</div>
+<div class="t"><span>🔔</span>تذكير قبل الانتهاء</div>
+</div>
+</div></div>
+
+<section id="how"><div class="w">
+<div class="eyebrow">كيفاش تخدم</div><h2>ثلاث خطوات وكرهبتك واجدة</h2>
+<p class="sub">من الحجز للتسليم، نتكفلو بكل شيء.</p>
+<div class="grid g3">
+<div class="card step"><div class="n">1</div><h3>تحجز</h3><p>بالواتساب أو بالفورم تحت، ونؤكدولك الموعد في دقائق.</p></div>
+<div class="card step"><div class="n">2</div><h3>نستلمو الكرهبة</h3><p>السائق يوصلك للعنوان، ياخذ الأوراق ويمضي معاك التفويض.</p></div>
+<div class="card step"><div class="n">3</div><h3>نرجعوها لك</h3><p>تتسلم كرهبتك ونتيجة الفحص. وإذا فما عيوب نرتبو الإصلاح.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="w">
+<div class="eyebrow">علاش VisiteGo</div><h2>خدمة تحس فيها بالراحة</h2>
+<p class="sub">نخدمو للأفراد، التاكسيات والشركات الصغيرة.</p>
+<div class="grid g3">
+<div class="card"><div class="ic">⏱️</div><h3>نوفرو وقتك</h3><p>الطابور والانتظار علينا، ونهارك يبقى ليك.</p></div>
+<div class="card"><div class="ic">🔍</div><h3>فحص مبدئي</h3><p>نراجعو الأضواء، الفرامل والإطارات قبل الذهاب باش نقللو خطر الرفض.</p></div>
+<div class="card"><div class="ic">🏢</div><h3>عقود الأساطيل</h3><p>أسعار خاصة ومتابعة آلية لمواعيد كل كراهب الشركة.</p></div>
+</div></div></section>
+
+<section id="prices"><div class="w">
+<div class="eyebrow">الأسعار</div><h2>أسعار واضحة، بلا مفاجآت</h2>
+<p class="sub">السعر هذا هو سعر خدمتنا. معلوم الفحص الرسمي في المركز يتدفع بعيد.</p>
+<div class="grid g3">
+<div class="card pkg"><h3>أساسية</h3><div class="price">40 <small>د</small></div>
+<ul><li>استلام وفحص وتسليم</li><li>السيجومي والأحياء القريبة</li><li>تفويض كتابي</li></ul>
+<a class="btn ghost" href="#book" data-p="0">اختار</a></div>
+<div class="card pkg hot"><span class="badge">الأكثر طلبا</span><h3>مريحة</h3><div class="price">60 <small>د</small></div>
+<ul><li>كل الأساسية</li><li>فحص مبدئي قبل الـvisite</li><li>تذكير للسنة الجاية</li></ul>
+<a class="btn" href="#book" data-p="1">اختار</a></div>
+<div class="card pkg"><h3>شاملة</h3><div class="price">90 <small>د</small></div>
+<ul><li>كل المريحة</li><li>ترتيب إصلاح العيوب</li><li>contre-visite بلا زيادة</li></ul>
+<a class="btn ghost" href="#book" data-p="2">اختار</a></div>
+</div>
+<p class="note">إضافات: مسافة أكثر من 10 كم +15 د · استعجال أو نهار السبت +15 د. الأسعار قابلة للتعديل.</p>
+</div></section>
+
+<section id="book" class="alt"><div class="w bgrid">
+<div>
+<div class="eyebrow">الحجز</div><h2>احجز موعدك في دقيقة</h2>
+<p class="sub">عمّر الفورم ويوصلنا طلبك مباشرة على واتساب. نرجعولك لتأكيد الموعد.</p>
+<div class="ct"><a class="btn wa" href="https://wa.me/21623099462" target="_blank" rel="noopener">واتساب</a><a class="btn ghost" href="tel:+21623099462">☎ 23 099 462</a></div>
+<p class="note">الأوراق المطلوبة: البطاقة الرمادية، التأمين، ونسخة من بطاقة التعريف.</p>
+</div>
+<div class="card">
+<div class="two"><div><label for="name">الاسم</label><input id="name" autocomplete="name"></div>
+<div><label for="phone">الهاتف</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel"></div></div>
+<label for="car">الكرهبة والمطرية (اختياري)</label><input id="car" placeholder="Clio 4 – 123 تونس 4567">
+<label for="addr">العنوان / الحي</label><input id="addr" placeholder="السيجومي، حي...">
+<div class="two"><div><label for="date">التاريخ المفضل</label><input id="date" type="date"></div>
+<div><label for="pkg">الباقة</label><select id="pkg"><option value="40|أساسية">أساسية – 40 د</option><option value="60|مريحة" selected>مريحة – 60 د</option><option value="90|شاملة">شاملة – 90 د</option></select></div></div>
+<label class="chk"><input type="checkbox" id="far"> مسافة أكثر من 10 كم (+15 د)</label>
+<label class="chk"><input type="checkbox" id="urg"> استعجال أو نهار السبت (+15 د)</label>
+<div class="total"><span>السعر التقديري للخدمة</span><span><b id="tot">60</b> د</span></div>
+<button class="btn wa lg" id="send" type="button" style="width:100%">ابعث الطلب بالواتساب</button>
+</div>
+</div></section>
+
+<section id="faq"><div class="w" style="max-width:760px">
+<div class="eyebrow">أسئلة</div><h2>أسئلة متكررة</h2><br>
+<details><summary>شنوة الأوراق الي نحتاجها؟</summary><p>البطاقة الرمادية، التأمين، نسخة من بطاقة التعريف، وتفويض كتابي نوفروه لك.</p></details>
+<details><summary>الكرهبة مؤمّنة وهي مع السائق؟</summary><p>نعم، السائق مغطى بتأمين مهني طول المهمة.</p></details>
+<details><summary>وإذا الكرهبة ما عدّتش الفحص؟</summary><p>نعلموك بالعيوب، ونرتبو الإصلاح مع ورشة شريكة ونعاودو الـcontre-visite.</p></details>
+<details><summary>قداش تاخذ المهمة؟</summary><p>غالبا بين ساعتين وثلاث ساعات حسب الازدحام في المركز.</p></details>
+</div></section>
+</main>
+
+<footer><div class="w"><div><b>VisiteGo</b> · تونس العاصمة – السيجومي</div><div><a href="tel:+21623099462">☎ 23 099 462</a></div></div></footer>
+<a class="fab" href="https://wa.me/21623099462" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+
+<script>
+(function(){
+  var PHONE="21623099462";
+  var $=function(i){return document.getElementById(i)};
+  function price(){var p=parseInt($("pkg").value.split("|")[0],10);if($("far").checked)p+=15;if($("urg").checked)p+=15;return p}
+  function upd(){$("tot").textContent=price()}
+  ["pkg","far","urg"].forEach(function(i){$(i).addEventListener("change",upd)});
+  document.querySelectorAll("[data-p]").forEach(function(a){a.addEventListener("click",function(){$("pkg").selectedIndex=+a.getAttribute("data-p");upd()})});
+  $("send").addEventListener("click",function(){
+    if(!$("name").value.trim()||!$("phone").value.trim()){alert("ادخل الاسم ورقم الهاتف");return}
+    var m="السلام، نحب نحجز visite technique\n"+
+      "الاسم: "+$("name").value+"\nالهاتف: "+$("phone").value+"\n"+
+      "الكرهبة: "+($("car").value||"-")+"\nالعنوان: "+($("addr").value||"-")+"\n"+
+      "التاريخ: "+($("date").value||"-")+"\nالباقة: "+$("pkg").value.split("|")[1]+
+      ($("far").checked?" + مسافة بعيدة":"")+($("urg").checked?" + استعجال":"")+
+      "\nالسعر التقديري: "+price()+" د";
+    window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(m),"_blank");
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
